@@ -1,0 +1,35 @@
+QWidget {
+    background-color: #1e253b;
+}
+
+QPushButton {
+    background-color: #2a334e;
+    color: #6a7493;
+    border: 1px solid #3b4563;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px; 
+}
+
+QPushButton:hover {
+    background-color: #39425e;
+    color: #6a7493;
+    border: 1px solid #485271;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px; 
+}
+
+QLabel {
+    background: none;
+    font-size: 18px; 
+    color: #ffffff;
+}
+
+QLineEdit {
+    border: 1px solid #6a7493;
+    color:#6a7493;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px; 
+}
