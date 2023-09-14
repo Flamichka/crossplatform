@@ -3,7 +3,7 @@ ___
 ## Instalization
 To setup project run:
 
-before installing dependencies be sure the virtual enviroment is active
+before installing dependencies make sure the virtual enviroment is active
 ```
 > python -m venv .venv 
 > .venv\Scripts\activate
