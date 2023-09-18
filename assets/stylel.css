@@ -1,0 +1,36 @@
+/* QWidget - Background color for the whole application */
+QWidget {
+    background-color: #ffffff; /* Set background to white */
+}
+
+/* QPushButton - Blue button style like Bootstrap */
+QPushButton {
+    background-color: #007bff; /* Bootstrap primary blue color */
+    color: #ffffff; /* White text */
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around the button text */
+    font-size: 16px; /* Font size */
+}
+
+/* QPushButton:hover - Button hover state */
+QPushButton:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    border: 1px solid #0056b3; /* Slightly darker blue border on hover */
+}
+
+/* QLabel - Label text style */
+QLabel {
+    background: none; /* No background */
+    font-size: 18px; /* Font size */
+    color: #000000; /* Black text on light background */
+}
+
+/* QLineEdit - Text input style */
+QLineEdit {
+    border: 1px solid #007bff; /* Blue border */
+    color: #000000; /* Black text on light background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input field */
+    font-size: 16px; /* Font size */
+}

@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QLabel, QPushButton, QFileDialog
 from PyQt5.QtGui import QIcon
-
+from app.Logger import log
 class FilePinWidget(QWidget):
     def __init__(self, label_text):
         super().__init__()
@@ -32,5 +32,13 @@ class FilePinWidget(QWidget):
                 self.label.setText(file_name)
                 self.pin_clear_button.setIcon(QIcon("assets/delete.svg"))
                 
-    def get_file(self):
-        return self.pinned_file
+    def get_file_content(self):
+        if self.pinned_file:
+            try:
+                with open(self.pinned_file, 'r') as file:
+                    return file.read()
+            except FileNotFoundError as e:
+                log.error(f"Error in {self.__class__.__name__}: {e}")
+                return ""
+        else:
+            return ""
