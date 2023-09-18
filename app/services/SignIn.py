@@ -1,13 +1,15 @@
 import json
 from app.Logger import log
 from app.models.UserKeys import UserKeys
+import app.APIHandler as API
 
-def write_user_cache(user_keys):
+def write_user_cache(user_keys, serverdata):
     try:
         user_data = {
             'username': user_keys.username,
             'publicKey': user_keys.publicKey,
-            'privateKey': user_keys.privateKey
+            'privateKey': user_keys.privateKey,
+            'serverdata': serverdata['data']
         }
 
         with open('user_cache.json', 'w') as file:
@@ -21,8 +23,8 @@ def write_user_cache(user_keys):
 def sign_in(user_keys: UserKeys):
     try:
         validate(user_keys)
-        print(user_keys.username)
-        write_user_cache(user_keys)
+        Serverdata = API.sign_in(user_keys)
+        #write_user_cache(user_keys, Serverdata)
     except Exception as e:
         log.error(f"Signin in failed: {e}")
         
